@@ -1,0 +1,52 @@
+input_shape :  [128, 128, 3]
+encodings_len: 64
+margin: 0.4
+mode : 'triplet'
+distance_type : 'l2'
+backbone : 'nist_mymodel'
+backbone_weights : ''
+freeze_backbone : False
+#augmentation_type : None
+min_n_obj_per_class : 1500 
+select_max_n_obj_per_class : 1500
+max_n_obj_per_class : 50000
+embeddings_normalization: True
+to_validate : False
+verbose: True
+
+# optimizer parameters
+optimizer : 'radam'
+learning_rate : 0.0001
+decay_factor : 0.99999
+step_size : 1
+
+# embeddings learning training parameters
+n_epochs : 1000
+n_steps_per_epoch : 500
+val_batch_size : 16
+val_steps : 10
+negatives_selection_mode : 'hardest'
+mining_n_classes: 2
+mining_n_samples: 7
+
+# softmax pretraining parameters
+softmax_pretraining : False
+softmax_batch_size_train : 32
+softmax_batch_size_val : 16
+softmax_val_steps : 500
+softmax_steps_per_epoch : 100
+softmax_epochs : 10
+softmax_is_binary: False
+
+# paths
+work_dir : 'work_dirs/nist_mymodel_nopretrain-hardest/'
+dataset_path : 'Dataset/nist/'
+plot_history : True
+model_save_name : 'best_model_nist_mymodel_nopretrain-hardest.h5'
+encodings_save_name: 'encodings_nist_mymodel_nopretrain-hardest.pkl'
+
+# encodings parameters
+save_encodings : True
+centers_only: False
+max_num_samples_of_each_class : 30
+knn_k : 1
