@@ -2,7 +2,7 @@
 
 Original framework is available at https://github.com/RocketFlash/EmbeddingNet. 
 
-This repository contains the modifications and materials used in experiments described in *Metric Embedding Learning on Multi-Directional Projections*, submitted to *MDPI Algorithms*.
+This repository contains the modifications and materials used in experiments described in *Metric Embedding Learning on Multi-Directional Projections*, submitted to *MDPI Algorithms*. Result logs are available in https://github.com/kerteszg/EmbeddingNet/tree/master/experiment-results.
 
 Below are the original instructions to setup the environment. To setup the original version of the framework, please refer to the installation notes on [the original repository](https://github.com/RocketFlash/EmbeddingNet).
 
