@@ -17,7 +17,8 @@ class EmbeddingNetImageLoader:
                        augmentations=None, 
                        min_n_obj_per_class = None,
                        select_max_n_obj_per_class = None, 
-                       max_n_obj_per_class = None):
+                       max_n_obj_per_class = None,
+                       verbose = True):
         self.dataset_path = dataset_path
         self.data_subsets = [d.split('/')[-1] for d in os.listdir(self.dataset_path) if os.path.isdir(os.path.join(self.dataset_path, d))]
         self.images_paths = {}
@@ -28,7 +29,7 @@ class EmbeddingNetImageLoader:
         self.select_max_n_obj_per_class = select_max_n_obj_per_class if select_max_n_obj_per_class else 1e10
         self.max_n_obj_per_class = max_n_obj_per_class if max_n_obj_per_class else 1e10
         self.current_idx = {d: 0 for d in self.data_subsets}
-        self._load_images_paths()
+        self._load_images_paths(verbose)
         self.classes = {
             s: sorted(list(set(self.images_labels[s]))) for s in self.data_subsets}
         self.n_classes = {s: len(self.classes[s]) for s in self.data_subsets}
@@ -36,7 +37,7 @@ class EmbeddingNetImageLoader:
         self.indexes = {d: {cl: np.where(np.array(self.images_labels[d]) == cl)[
             0] for cl in self.classes[d]} for d in self.data_subsets}
 
-    def _load_images_paths(self):
+    def _load_images_paths(self, verbose=True):
         skip_list = ['train','val','test']
         n_files_dataset = 0
         n_files_selected = 0
@@ -55,7 +56,8 @@ class EmbeddingNetImageLoader:
 
                 if (n_obj<self.min_n_obj_per_class or n_obj>=self.max_n_obj_per_class)  and d == 'train':
                     skip_list.append(curr_class)
-                    print('Class {:11} WAS SKIPPED'.format(curr_class))
+                    if verbose:
+                        print('Class {:11} WAS SKIPPED'.format(curr_class))
                     continue
                     
                 if curr_class in skip_list:
@@ -74,7 +76,8 @@ class EmbeddingNetImageLoader:
                 n_files_selected+=count
                 if d == 'train':
                     n_classes_selected += 1
-                print('Class {:11}: total number of files {:6}, selected {:6}'.format(curr_class, n_obj, count))
+                if verbose:
+                    print('Class {:11}: total number of files {:6}, selected {:6}'.format(curr_class, n_obj, count))
         print('Total number of files in dataset: {}'.format(n_files_dataset))
         print('Number of selected files: {}'.format(n_files_selected))
         print('Number of selected classes: {}'.format(n_classes_selected))
@@ -87,13 +90,16 @@ class EmbeddingNetImageLoader:
             indxs = [self.indexes[s][clsss][idx] for idx in idxs]
         imgs = [cv2.imread(self.images_paths[s][idx]) for idx in indxs]
 
+        #print("this", imgs[0].shape)
+        #print("to", self.input_shape)
         if self.input_shape:
             imgs = [cv2.resize(
-                img, (self.input_shape[0], self.input_shape[1])) for img in imgs]
+                img, (self.input_shape[1], self.input_shape[0])) for img in imgs]
 
         if with_aug:
             imgs = [self.augmentations(image=img)['image'] for img in imgs]
 
+        #print("new", imgs[0].shape)
         return imgs
 
     def get_batch_random(self, batch_size,  s='train'):
@@ -131,6 +137,8 @@ class EmbeddingNetImageLoader:
 
             img = self._get_images_set(
                 [selected_class], [indx], s=s, with_aug=with_aug)
+            #print(img[0].shape)
+            #print(images[0].shape)
             images[0][count, :, :, :] = img[0]
             targets[i][selected_class_idx] = 1
             count += 1
@@ -344,7 +352,7 @@ class EmbeddingNetImageLoader:
             return None
         if self.input_shape:
             img = cv2.resize(
-                img, (self.input_shape[0], self.input_shape[1]))
+                img, (self.input_shape[1], self.input_shape[0]))
         return img
 
 
