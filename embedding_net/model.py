@@ -15,6 +15,8 @@ import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsClassifier
 from keras.callbacks import TensorBoard, LearningRateScheduler
 from keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
+import numpy.random as rng
+from sklearn.utils import shuffle
 
 # TODO
 # [] - implement magnet loss
@@ -50,9 +52,9 @@ class EmbeddingNet:
         self.backbone_model = []
 
         if self.mode == 'siamese':
-            self._create_model_siamese()
+            self._create_model_siamese(cfg_params['verbose'])
         elif self.mode == 'triplet':
-            self._create_model_triplet()
+            self._create_model_triplet(cfg_params['verbose'])
         else:
             self._create_base_model()
 
@@ -70,7 +72,10 @@ class EmbeddingNet:
         else: 
             is_binary = False
 
-        x = keras.layers.GlobalAveragePooling2D()(self.backbone_model.output)
+        if len(self.backbone_model.output.shape) == 4:
+            x = keras.layers.GlobalAveragePooling2D()(self.backbone_model.output)
+        else:
+            x = self.backbone_model.output
         if is_binary:
             output = keras.layers.Dense(1, activation='softmax')(x)
         else:
@@ -134,12 +139,12 @@ class EmbeddingNet:
     def _create_base_model(self):
         self.base_model, self.backbone_model = get_backbone(input_shape=self.input_shape,
                                                             encodings_len=self.encodings_len,
-                                                            backbone_name=self.backbone,
+                                                            backbone_type=self.backbone,
                                                             embeddings_normalization=self.embeddings_normalization,
                                                             backbone_weights=self.backbone_weights,
                                                             freeze_backbone=self.freeze_backbone)
 
-    def _create_model_siamese(self):
+    def _create_model_siamese(self, verbose=True):
 
         input_image_1 = Input(self.input_shape)
         input_image_2 = Input(self.input_shape)
@@ -170,16 +175,17 @@ class EmbeddingNet:
         self.model = Model(
             inputs=[input_image_1, input_image_2], outputs=prediction)
 
-        print('Base model summary')
-        self.base_model.summary()
+        if verbose:
+            print('Base model summary')
+            self.base_model.summary()
 
-        print('Whole model summary')
-        self.model.summary()
+            print('Whole model summary')
+            self.model.summary()
 
         self.model.compile(loss=lac.contrastive_loss, metrics=[metric],
                            optimizer=self.optimizer)
 
-    def _create_model_triplet(self):
+    def _create_model_triplet(self, verbose=True):
         input_image_a = Input(self.input_shape)
         input_image_p = Input(self.input_shape)
         input_image_n = Input(self.input_shape)
@@ -195,11 +201,12 @@ class EmbeddingNet:
         self.model = Model(inputs=[input_image_a, input_image_p, input_image_n],
                            outputs=merged_vector)
 
-        print('Base model summary')
-        self.base_model.summary()
+        if verbose:
+            print('Base model summary')
+            self.base_model.summary()
 
-        print('Whole model summary')
-        self.model.summary()
+            print('Whole model summary')
+            self.model.summary()
 
         self.model.compile(loss=lac.triplet_loss(
             self.margin), optimizer=self.optimizer)
@@ -253,7 +260,7 @@ class EmbeddingNet:
                                n_classes=4,
                                n_samples=4,
                                val_batch=8,
-                               negative_selection_mode='semihard',
+                               negative_selection_mode='hardest',
                                verbose=1):
 
         train_generator = self.data_loader.generate_mining(
@@ -351,16 +358,26 @@ class EmbeddingNet:
     def load_encodings(self, path_to_encodings):
         self.encoded_training_data = load_encodings(path_to_encodings)
 
-    def load_model(self, file_path):
+    def load_model(self, file_path, mode='triplet', _compile=True):
         from keras_radam import RAdam
         self.model = load_model(file_path,
                                 custom_objects={'contrastive_loss': lac.contrastive_loss,
                                                 'accuracy': lac.accuracy,
                                                 'loss_function': lac.triplet_loss(self.margin),
-                                                'RAdam': RAdam})
+                                                'RAdam': RAdam},
+                                compile=_compile)
+        if not _compile:
+            print(self.model.summary())
+            self.model.compile(loss=lac.contrastive_loss, optimizer=self.optimizer)
         self.input_shape = list(self.model.inputs[0].shape[1:])
-        self.base_model = Model(inputs=[self.model.layers[3].get_input_at(0)],
-                                outputs=[self.model.layers[3].layers[-1].output])
+        if mode == 'triplet':
+            self.base_model = Model(inputs=[self.model.layers[3].get_input_at(0)],
+                                    outputs=[self.model.layers[3].layers[-1].output])
+        elif mode == 'siamese':
+            self.base_model = Model(inputs=[self.model.layers[2].get_input_at(0)],
+                                    outputs=[self.model.layers[2].layers[-1].output])
+        else:
+            raise Exception('unknown mode')
         self.base_model._make_predict_function()
 
     def calculate_distances(self, encoding):
@@ -385,7 +402,7 @@ class EmbeddingNet:
             img = cv2.imread(image)
         else:
             img = image
-        img = cv2.resize(img, (self.input_shape[0], self.input_shape[1]))
+        img = cv2.resize(img, (self.input_shape[1], self.input_shape[0]))
 
         encoding = self.base_model.predict(np.expand_dims(img, axis=0))
         predicted_label = self.encoded_training_data['knn_classifier'].predict(encoding)
@@ -414,3 +431,80 @@ class EmbeddingNet:
         accuracies['top5'] = correct_top5/total_n_of_images
 
         return accuracies
+
+    def test_siamese_oneshot(self, N, k, s="val", verbose=0): #TODO FIXME not sure that this works
+        """Test average N way oneshot learning accuracy of a siamese neural net over k one-shot tasks"""
+        n_correct = 0
+        for i in range(k):
+            inputs, targets = self.make_oneshot_task(N)
+            anchor_path = inputs[0][0]
+            anchor_im = cv2.imread(anchor_path)
+            anchor_im = cv2.resize(anchor_im, (self.input_shape[1], self.input_shape[0]))
+            dist = []
+            for j in range(len(inputs[0])):
+                test_im = cv2.imread(inputs[1][j])
+                test_im = cv2.resize(test_im, (self.input_shape[1], self.input_shape[0]))
+                dist.append(self.model.predict([np.array([anchor_im]), np.array([test_im])]))
+            if np.argmin(dist) == np.argmax(targets):
+                n_correct += 1
+            #print(dist, targets)
+            #print(np.argmax(targets), np.argmax(dist), np.argmin(dist))
+        percent_correct = (100.0 * n_correct / k)
+        return percent_correct
+    
+    
+    def test_oneshot(self, N, k, X=None, s="val", verbose=0):
+        """Test average N way oneshot learning accuracy of a siamese neural net over k one-shot tasks"""
+        if X is None:
+            X = prepare_sample_dict(s)
+        n_correct = 0
+        for i in range(k):
+            inputs, targets = self.make_oneshot_task(N, X, s)
+            anchor_path = inputs[0][0]
+            anchor_im = cv2.imread(anchor_path)
+            anchor_im = cv2.resize(anchor_im, (self.input_shape[1], self.input_shape[0]))
+            anchor_encoding = self.base_model.predict(np.expand_dims(anchor_im, axis=0))
+            dist = []
+            for j in range(len(inputs[0])):
+                test_im = cv2.imread(inputs[1][j])
+                test_im = cv2.resize(test_im, (self.input_shape[1], self.input_shape[0]))
+                test_encoding = self.base_model.predict(np.expand_dims(test_im, axis=0))
+                dist.append(np.sqrt(np.sum((anchor_encoding - np.array(test_encoding))**2, axis=1)))
+            if np.argmin(dist) == np.argmax(targets):
+                n_correct += 1
+        percent_correct = (100.0 * n_correct / k)
+        return percent_correct
+
+    def make_oneshot_task(self, N, X, s="val"):
+        """Create pairs of test image, support set for testing N way one-shot learning. """
+        n_classes = len(set(self.data_loader.images_labels[s]))
+        #X = {}
+        #for l in self.data_loader.images_labels[s]:
+        #    X[l] = [f for f in self.data_loader.images_paths[s] if s + '/' + l + '/' in f]
+        true_category = rng.choice(self.data_loader.images_labels[s], size=(1,), replace=False)[0]
+        all_false_cats = [c for c in self.data_loader.images_labels[s] if c != true_category]
+        categories = rng.choice(all_false_cats, size=(N,), replace=False)
+        ex1, ex2 = rng.choice(len(X[true_category])-1, replace=False, size=(2,))
+        if (ex2 >= ex1):
+            ex2+=1
+        
+        test_image = X[true_category][ex1]
+        
+        support_set = []
+        for l in categories:
+            idx = rng.randint(0, len(X[l]), size=(1,))
+            support_set.append(X[l][idx[0]])
+        support_set[0] = X[true_category][ex2]
+        
+        targets = np.zeros((N,))
+        targets[0] = 1
+        targets, test_image, support_set = shuffle(targets, [test_image for i in range(N)], support_set)
+        pairs = [test_image, support_set]
+
+        return pairs, targets
+
+    def prepare_sample_dict(self, s):
+        X = {}
+        for l in self.data_loader.images_labels[s]:
+            X[l] = [f for f in self.data_loader.images_paths[s] if s + '/' + l + '/' in f]
+        return X
