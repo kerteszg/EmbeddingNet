@@ -64,16 +64,10 @@ $ python test_allconfigs.py
 
 To filter out some of the configs (e.g. by name), refer to the source code.
 
-Once again, kudos to the authors of the original framework, referred to 
+Once again, kudos to the authors of the original EmbeddingNet framework [1].
 
 # References
 
-[0] Rauf Yagfarov, Vladislav Ostankovich, Aydar Akhmetzyanov. [Traffic Sign Classification Using Embedding Learning Approach for Self-driving Cars](https://link.springer.com/chapter/10.1007/978-3-030-44267-5_27), IHIET–AI 2020
+[1] Rauf Yagfarov, Vladislav Ostankovich, Aydar Akhmetzyanov. [Traffic Sign Classification Using Embedding Learning Approach for Self-driving Cars](https://link.springer.com/chapter/10.1007/978-3-030-44267-5_27), IHIET–AI 2020
 
-[1] Schroff, Florian, Dmitry Kalenichenko, and James Philbin. [Facenet: A unified embedding for face recognition and clustering.](https://arxiv.org/abs/1503.03832) CVPR 2015
-
-[2] Alexander Hermans, Lucas Beyer, Bastian Leibe, [In Defense of the Triplet Loss for Person Re-Identification](https://arxiv.org/pdf/1703.07737), 2017
-
-[3] Adam Bielski [Siamese and triplet networks with online pair/triplet mining in PyTorch](https://github.com/adambielski/siamese-triplet)
-
-[4] Olivier Moindrot [Triplet Loss and Online Triplet Mining in TensorFlow](https://omoindrot.github.io/triplet-loss)
+[2] Kertész, Gábor, Sándor Szénási, and Zoltán Vámossy. [Multi-directional image projections with fixed resolution for object matching](https://www.researchgate.net/profile/Gabor_Kertesz/publication/324775359_Multi-Directional_Image_Projections_with_Fixed_Resolution_for_Object_Matching/links/5ae1bdee458515c60f668f9c/Multi-Directional-Image-Projections-with-Fixed-Resolution-for-Object-Matching.pdf) Acta Polytechnica Hungarica 15.2 (2018): 211-229.
