@@ -1,0 +1,1320 @@
+kerteszg@cudaServer:~/EmbeddingNet$ source ../venv-EmbeddingNet/bin/activate
+(venv-EmbeddingNet) kerteszg@cudaServer:~/EmbeddingNet$ python @test_all_configs.py 
+Using TensorFlow backend.
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+going to test: nist_mdipfl50_mymodel-hardest.yml
+going to test: nist_mdipfl50_mymodel.yml
+going to test: nist_mdipfl50_mymodel_nopretrain-hardest.yml
+going to test: nist_mdipfl50_mymodel_nopretrain.yml
+going to test: nist_mdipfl50_mymodel_siamese.yml
+going to test: nist_mdipfl50_mymodel_siamese_nopretrain.yml
+going to test: nist_mymodel-hardest.yml
+going to test: nist_mymodel.yml
+going to test: nist_mymodel_nopretrain-hardest.yml
+going to test: nist_mymodel_nopretrain.yml
+going to test: nist_mymodel_siamese.yml
+going to test: nist_mymodel_siamese_nopretrain.yml
+going to test: nist_sq_mymodel-hardest.yml
+going to test: nist_sq_mymodel.yml
+going to test: nist_sq_mymodel_nopretrain-hardest.yml
+going to test: nist_sq_mymodel_nopretrain.yml
+going to test: nist_sq_mymodel_siamese.yml
+going to test: nist_sq_mymodel_siamese_nopretrain.yml
+going to test: nu_cvpr2016_mdipfl50_mymodel-hardest.yml
+going to test: nu_cvpr2016_mdipfl50_mymodel.yml
+going to test: nu_cvpr2016_mdipfl50_mymodel_siamese.yml
+going to test: nu_cvpr2016_mdipfl50_nasnet-hardest.yml
+going to test: nu_cvpr2016_mdipfl50_nasnet.yml
+going to test: nu_cvpr2016_mdipfl50_nasnet_nopretrain-hardest.yml
+going to test: nu_cvpr2016_mdipfl50_nasnet_nopretrain.yml
+going to test: nu_cvpr2016_mdipfl50_nasnet_siamese.yml
+going to test: nu_cvpr2016_mdipfl50_nasnet_siamese_nopretrain.yml
+going to test: nu_cvpr2016_mdipfl50_resnet18-hardest.yml
+going to test: nu_cvpr2016_mdipfl50_resnet18.yml
+going to test: nu_cvpr2016_mdipfl50_resnet18_nopretrain-hardest.yml
+going to test: nu_cvpr2016_mdipfl50_resnet18_nopretrain.yml
+going to test: nu_cvpr2016_mdipfl50_resnet18_siamese.yml
+going to test: nu_cvpr2016_mdipfl50_resnet18_siamese_nopretrain.yml
+going to test: nu_cvpr2016_resnet18-hardest.yml
+going to test: nu_cvpr2016_resnet18.yml
+going to test: nu_cvpr2016_resnet18_siamese.yml
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+Loading model ...
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+2020-04-23 11:54:01.300608: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2020-04-23 11:54:01.421680: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x72b1290 executing computations on platform CUDA. Devices:
+2020-04-23 11:54:01.421745: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla K20Xm, Compute Capability 3.5
+2020-04-23 11:54:01.441486: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2593710000 Hz
+2020-04-23 11:54:01.442569: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7376b70 executing computations on platform Host. Devices:
+2020-04-23 11:54:01.442592: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-04-23 11:54:01.444071: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla K20Xm major: 3 minor: 5 memoryClockRate(GHz): 0.732
+pciBusID: 0000:2b:00.0
+2020-04-23 11:54:01.444428: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2020-04-23 11:54:01.445769: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2020-04-23 11:54:01.446995: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2020-04-23 11:54:01.447342: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2020-04-23 11:54:01.448911: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2020-04-23 11:54:01.450243: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2020-04-23 11:54:01.454033: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2020-04-23 11:54:01.456541: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2020-04-23 11:54:01.456600: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2020-04-23 11:54:01.458713: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-23 11:54:01.458730: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2020-04-23 11:54:01.458751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2020-04-23 11:54:01.461332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5329 MB memory) -> physical GPU (device: 0, name: Tesla K20Xm, pci bus id: 0000:2b:00.0, compute capability: 3.5)
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           5436096     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 5,436,096
+Trainable params: 5,436,096
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mdipfl50_mymodel-hardest.yml for set: train
+2020-04-23 12:23:48.598556: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2020-04-23 12:23:48.805738: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+measuring one-shot accuracy of  nist_mdipfl50_mymodel-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           5436096     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 5,436,096
+Trainable params: 5,436,096
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mdipfl50_mymodel.yml for set: train
+measuring one-shot accuracy of  nist_mdipfl50_mymodel.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           5436096     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 5,436,096
+Trainable params: 5,436,096
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mdipfl50_mymodel_nopretrain-hardest.yml for set: train
+measuring one-shot accuracy of  nist_mdipfl50_mymodel_nopretrain-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           5436096     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 5,436,096
+Trainable params: 5,436,096
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mdipfl50_mymodel_nopretrain.yml for set: train
+measuring one-shot accuracy of  nist_mdipfl50_mymodel_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           5436096     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 5,436,096
+Trainable params: 5,436,096
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mdipfl50_mymodel_siamese.yml for set: train
+measuring one-shot accuracy of  nist_mdipfl50_mymodel_siamese.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           5436096     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 5,436,096
+Trainable params: 5,436,096
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mdipfl50_mymodel_siamese_nopretrain.yml for set: train
+measuring one-shot accuracy of  nist_mdipfl50_mymodel_siamese_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           9175552     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 9,175,552
+Trainable params: 9,175,552
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mymodel-hardest.yml for set: train
+measuring one-shot accuracy of  nist_mymodel-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           9175552     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 9,175,552
+Trainable params: 9,175,552
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mymodel.yml for set: train
+measuring one-shot accuracy of  nist_mymodel.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           9175552     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 9,175,552
+Trainable params: 9,175,552
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mymodel_nopretrain-hardest.yml for set: train
+measuring one-shot accuracy of  nist_mymodel_nopretrain-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           9175552     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 9,175,552
+Trainable params: 9,175,552
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mymodel_nopretrain.yml for set: train
+measuring one-shot accuracy of  nist_mymodel_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           9175552     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 9,175,552
+Trainable params: 9,175,552
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mymodel_siamese.yml for set: train
+measuring one-shot accuracy of  nist_mymodel_siamese.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           9175552     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 9,175,552
+Trainable params: 9,175,552
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_mymodel_siamese_nopretrain.yml for set: train
+measuring one-shot accuracy of  nist_mymodel_siamese_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           6290880     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 6,290,880
+Trainable params: 6,290,880
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_sq_mymodel-hardest.yml for set: train
+measuring one-shot accuracy of  nist_sq_mymodel-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           6290880     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 6,290,880
+Trainable params: 6,290,880
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_sq_mymodel.yml for set: train
+measuring one-shot accuracy of  nist_sq_mymodel.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           6290880     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 6,290,880
+Trainable params: 6,290,880
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_sq_mymodel_nopretrain-hardest.yml for set: train
+measuring one-shot accuracy of  nist_sq_mymodel_nopretrain-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           6290880     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 192)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 6,290,880
+Trainable params: 6,290,880
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_sq_mymodel_nopretrain.yml for set: train
+measuring one-shot accuracy of  nist_sq_mymodel_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           6290880     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 6,290,880
+Trainable params: 6,290,880
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_sq_mymodel_siamese.yml for set: train
+measuring one-shot accuracy of  nist_sq_mymodel_siamese.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 814255
+Number of selected files: 131941
+Number of selected classes: 62
+Number of skipped classes: 4
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 64)           6290880     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 6,290,880
+Trainable params: 6,290,880
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nist_sq_mymodel_siamese_nopretrain.yml for set: train
+measuring one-shot accuracy of  nist_sq_mymodel_siamese_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:2041: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+WARNING:tensorflow:From /home/kerteszg/venv-EmbeddingNet/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:4271: The name tf.nn.avg_pool is deprecated. Please use tf.nn.avg_pool2d instead.
+
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          5399100     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+                                                                 model_1[3][0]                    
+==================================================================================================
+Total params: 5,399,100
+Trainable params: 5,362,362
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_mymodel-hardest.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_mymodel-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          5399100     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+                                                                 model_1[3][0]                    
+==================================================================================================
+Total params: 5,399,100
+Trainable params: 5,362,362
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_mymodel.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_mymodel.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          5399100     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+==================================================================================================
+Total params: 5,399,100
+Trainable params: 5,362,362
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_mymodel_siamese.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_mymodel_siamese.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          6455844     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+                                                                 model_1[3][0]                    
+==================================================================================================
+Total params: 6,455,844
+Trainable params: 6,419,106
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet-hardest.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          6455844     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+                                                                 model_1[3][0]                    
+==================================================================================================
+Total params: 6,455,844
+Trainable params: 6,419,106
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          6455844     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+                                                                 model_1[3][0]                    
+==================================================================================================
+Total params: 6,455,844
+Trainable params: 6,419,106
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet_nopretrain-hardest.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet_nopretrain-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          6455844     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+                                                                 model_1[3][0]                    
+==================================================================================================
+Total params: 6,455,844
+Trainable params: 6,419,106
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet_nopretrain.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          6455844     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+==================================================================================================
+Total params: 6,455,844
+Trainable params: 6,419,106
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet_siamese.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet_siamese.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_1 (Model)                 (None, 128)          6455844     input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_1[1][0]                    
+                                                                 model_1[2][0]                    
+==================================================================================================
+Total params: 6,455,844
+Trainable params: 6,419,106
+Non-trainable params: 36,738
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet_siamese_nopretrain.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_nasnet_siamese_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          12829017    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 12,829,017
+Trainable params: 12,821,075
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18-hardest.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          12829017    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 12,829,017
+Trainable params: 12,821,075
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          12829017    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 12,829,017
+Trainable params: 12,821,075
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18_nopretrain-hardest.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18_nopretrain-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          12829017    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 12,829,017
+Trainable params: 12,821,075
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18_nopretrain.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          12829017    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 12,829,017
+Trainable params: 12,821,075
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18_siamese.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18_siamese.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 50, 37, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          12829017    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 12,829,017
+Trainable params: 12,821,075
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18_siamese_nopretrain.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_mdipfl50_resnet18_siamese_nopretrain.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          11490185    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 11,490,185
+Trainable params: 11,482,243
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_resnet18-hardest.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_resnet18-hardest.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_3 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          11490185    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+                                                                 input_3[0][0]                    
+__________________________________________________________________________________________________
+merged_layer (Concatenate)      (None, 384)          0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+                                                                 model_2[3][0]                    
+==================================================================================================
+Total params: 11,490,185
+Trainable params: 11,482,243
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_resnet18.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_resnet18.yml for set: val
+train ======================================
+val   ======================================
+Total number of files in dataset: 20940
+Number of selected files: 20940
+Number of selected classes: 629
+Number of skipped classes: 3
+Loading model ...
+Model: "model_3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 96, 96, 3)    0                                            
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 128)          11490185    input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           model_2[1][0]                    
+                                                                 model_2[2][0]                    
+==================================================================================================
+Total params: 11,490,185
+Trainable params: 11,482,243
+Non-trainable params: 7,942
+__________________________________________________________________________________________________
+None
+Loading encodings ...
+measuring one-shot accuracy of  nu_cvpr2016_resnet18_siamese.yml for set: train
+measuring one-shot accuracy of  nu_cvpr2016_resnet18_siamese.yml for set: val
+finished
+{'nist_mdipfl50_mymodel-hardest_trainacc': [100.0, 97.1, 93.9, 89.9, 87.8, 85.7, 85.0, 83.2, 82.1, 81.0], 'nist_mdipfl50_mymodel-hardest_valacc': [100.0, 96.2, 93.2, 88.3, 87.1, 82.9, 79.9, 81.1, 79.5, 75.1], 'nist_mdipfl50_mymodel_trainacc': [100.0, 95.1, 89.1, 87.6, 84.9, 83.3, 80.0, 76.7, 75.9, 71.2], 'nist_mdipfl50_mymodel_valacc': [100.0, 92.4, 87.3, 86.2, 81.5, 77.6, 75.0, 76.0, 69.6, 70.6], 'nist_mdipfl50_mymodel_nopretrain-hardest_trainacc': [100.0, 97.2, 92.8, 90.1, 87.4, 85.8, 82.7, 82.4, 78.5, 76.6], 'nist_mdipfl50_mymodel_nopretrain-hardest_valacc': [100.0, 94.3, 91.8, 87.3, 83.4, 80.8, 79.3, 77.3, 77.2, 75.5], 'nist_mdipfl50_mymodel_nopretrain_trainacc': [100.0, 82.6, 71.2, 66.5, 58.5, 56.3, 54.5, 51.5, 48.5, 46.0], 'nist_mdipfl50_mymodel_nopretrain_valacc': [100.0, 80.8, 72.4, 66.4, 61.0, 54.7, 54.8, 50.6, 45.6, 42.2], 'nist_mdipfl50_mymodel_siamese_trainacc': [100.0, 98.7, 97.4, 96.2, 95.0, 93.3, 93.4, 92.0, 91.3, 90.2], 'nist_mdipfl50_mymodel_siamese_valacc': [100.0, 97.3, 95.2, 94.0, 90.4, 88.8, 87.1, 88.3, 87.2, 86.2], 'nist_mdipfl50_mymodel_siamese_nopretrain_trainacc': [100.0, 98.6, 96.7, 96.1, 94.0, 93.5, 93.4, 92.7, 92.0, 91.6], 'nist_mdipfl50_mymodel_siamese_nopretrain_valacc': [100.0, 97.7, 95.1, 93.9, 92.7, 92.2, 88.0, 88.1, 85.9, 87.3], 'nist_mymodel-hardest_trainacc': [100.0, 96.2, 93.5, 91.7, 89.4, 87.6, 81.9, 82.1, 83.6, 81.0], 'nist_mymodel-hardest_valacc': [100.0, 95.7, 92.5, 91.1, 86.7, 82.4, 81.0, 80.2, 76.9, 75.3], 'nist_mymodel_trainacc': [100.0, 96.3, 92.4, 90.4, 86.7, 86.2, 83.4, 81.5, 79.7, 77.7], 'nist_mymodel_valacc': [100.0, 94.8, 87.7, 86.0, 83.9, 80.5, 82.0, 75.6, 77.5, 74.2], 'nist_mymodel_nopretrain-hardest_trainacc': [100.0, 96.6, 93.0, 88.5, 87.5, 85.2, 83.2, 80.8, 79.8, 78.8], 'nist_mymodel_nopretrain-hardest_valacc': [100.0, 95.8, 91.0, 87.1, 87.7, 84.5, 80.4, 80.6, 78.3, 76.1], 'nist_mymodel_nopretrain_trainacc': [100.0, 96.5, 93.5, 90.9, 90.0, 86.3, 84.3, 83.8, 84.4, 80.2], 'nist_mymodel_nopretrain_valacc': [100.0, 94.7, 93.4, 88.0, 86.7, 83.5, 83.3, 79.8, 80.1, 76.7], 'nist_mymodel_siamese_trainacc': [100.0, 99.1, 97.9, 97.6, 96.0, 94.1, 95.1, 92.9, 93.3, 91.9], 'nist_mymodel_siamese_valacc': [100.0, 98.3, 96.4, 95.6, 93.7, 92.2, 90.9, 90.4, 88.8, 89.9], 'nist_mymodel_siamese_nopretrain_trainacc': [100.0, 99.3, 98.1, 97.6, 96.7, 95.1, 96.0, 94.2, 92.3, 91.9], 'nist_mymodel_siamese_nopretrain_valacc': [100.0, 98.2, 97.5, 94.9, 94.7, 92.3, 93.6, 90.1, 87.8, 89.5], 'nist_sq_mymodel-hardest_trainacc': [100.0, 94.1, 88.6, 87.3, 84.3, 82.4, 79.0, 78.4, 74.1, 73.0], 'nist_sq_mymodel-hardest_valacc': [100.0, 94.1, 86.3, 85.9, 81.2, 78.1, 77.6, 71.7, 68.1, 69.8], 'nist_sq_mymodel_trainacc': [100.0, 91.9, 86.6, 80.9, 77.3, 75.2, 73.4, 69.6, 66.0, 65.7], 'nist_sq_mymodel_valacc': [100.0, 90.3, 83.8, 81.3, 77.3, 72.4, 68.2, 68.2, 65.1, 60.4], 'nist_sq_mymodel_nopretrain-hardest_trainacc': [100.0, 93.9, 87.0, 80.0, 75.9, 74.3, 74.0, 70.6, 66.6, 68.9], 'nist_sq_mymodel_nopretrain-hardest_valacc': [100.0, 90.4, 83.0, 80.5, 76.4, 68.9, 70.6, 66.1, 64.2, 64.2], 'nist_sq_mymodel_nopretrain_trainacc': [100.0, 83.2, 71.4, 66.2, 61.6, 52.5, 52.2, 46.7, 43.3, 45.1], 'nist_sq_mymodel_nopretrain_valacc': [100.0, 81.9, 70.3, 65.7, 61.4, 57.2, 52.1, 49.1, 45.0, 46.3], 'nist_sq_mymodel_siamese_trainacc': [100.0, 98.6, 96.2, 95.2, 95.7, 94.5, 93.1, 92.1, 90.8, 89.9], 'nist_sq_mymodel_siamese_valacc': [100.0, 97.5, 94.7, 94.0, 94.5, 90.5, 91.6, 89.7, 88.0, 86.5], 'nist_sq_mymodel_siamese_nopretrain_trainacc': [100.0, 98.1, 93.7, 93.9, 90.1, 89.4, 87.9, 86.8, 84.3, 85.0], 'nist_sq_mymodel_siamese_nopretrain_valacc': [100.0, 94.9, 92.8, 91.1, 88.8, 84.9, 83.3, 84.4, 82.1, 79.8], 'nu_cvpr2016_mdipfl50_mymodel-hardest_trainacc': [100.0, 82.6, 77.6, 67.9, 60.5, 55.4, 53.2, 54.5, 49.8, 47.9], 'nu_cvpr2016_mdipfl50_mymodel-hardest_valacc': [100.0, 85.2, 77.9, 68.8, 63.0, 60.7, 55.9, 53.9, 49.9, 44.5], 'nu_cvpr2016_mdipfl50_mymodel_trainacc': [100.0, 85.4, 78.2, 75.5, 68.2, 62.0, 61.9, 57.3, 54.1, 49.7], 'nu_cvpr2016_mdipfl50_mymodel_valacc': [100.0, 86.6, 75.6, 69.3, 66.8, 63.3, 58.8, 54.7, 51.9, 52.5], 'nu_cvpr2016_mdipfl50_mymodel_siamese_trainacc': [100.0, 64.1, 50.8, 45.0, 36.6, 34.6, 30.3, 28.4, 25.5, 25.5], 'nu_cvpr2016_mdipfl50_mymodel_siamese_valacc': [100.0, 62.0, 48.5, 42.0, 37.7, 30.5, 26.3, 25.7, 23.1, 19.4], 'nu_cvpr2016_mdipfl50_nasnet-hardest_trainacc': [100.0, 89.4, 78.3, 71.7, 65.3, 64.4, 60.2, 57.3, 53.4, 50.8], 'nu_cvpr2016_mdipfl50_nasnet-hardest_valacc': [100.0, 89.1, 78.9, 71.1, 67.4, 64.4, 57.7, 55.5, 53.9, 49.3], 'nu_cvpr2016_mdipfl50_nasnet_trainacc': [100.0, 87.5, 75.3, 71.0, 67.7, 61.7, 58.6, 56.3, 52.0, 50.3], 'nu_cvpr2016_mdipfl50_nasnet_valacc': [100.0, 87.2, 79.4, 70.7, 64.5, 65.4, 60.0, 56.5, 53.3, 49.8], 'nu_cvpr2016_mdipfl50_nasnet_nopretrain-hardest_trainacc': [100.0, 82.1, 68.9, 63.3, 55.8, 52.5, 49.5, 47.0, 42.6, 42.2], 'nu_cvpr2016_mdipfl50_nasnet_nopretrain-hardest_valacc': [100.0, 80.7, 70.2, 62.1, 58.4, 50.8, 43.6, 43.1, 40.7, 40.4], 'nu_cvpr2016_mdipfl50_nasnet_nopretrain_trainacc': [100.0, 88.0, 80.4, 71.6, 68.2, 65.7, 62.5, 57.2, 54.7, 50.8], 'nu_cvpr2016_mdipfl50_nasnet_nopretrain_valacc': [100.0, 88.4, 80.7, 72.0, 67.6, 65.2, 62.5, 57.3, 52.1, 50.0], 'nu_cvpr2016_mdipfl50_nasnet_siamese_trainacc': [100.0, 82.2, 70.8, 64.7, 58.9, 54.3, 52.6, 47.7, 45.7, 43.3], 'nu_cvpr2016_mdipfl50_nasnet_siamese_valacc': [100.0, 76.6, 69.3, 61.3, 55.4, 52.6, 48.4, 45.5, 43.2, 41.8], 'nu_cvpr2016_mdipfl50_nasnet_siamese_nopretrain_trainacc': [100.0, 80.6, 69.8, 59.4, 53.0, 49.3, 48.6, 43.7, 40.2, 38.7], 'nu_cvpr2016_mdipfl50_nasnet_siamese_nopretrain_valacc': [100.0, 79.7, 68.2, 57.0, 55.3, 50.2, 47.8, 43.0, 41.0, 37.9], 'nu_cvpr2016_mdipfl50_resnet18-hardest_trainacc': [100.0, 94.2, 89.7, 87.5, 83.1, 79.1, 76.8, 77.5, 77.7, 74.2], 'nu_cvpr2016_mdipfl50_resnet18-hardest_valacc': [100.0, 93.2, 89.3, 83.0, 81.2, 78.7, 72.7, 72.0, 73.2, 70.7], 'nu_cvpr2016_mdipfl50_resnet18_trainacc': [100.0, 95.7, 91.2, 89.1, 85.2, 82.4, 80.5, 79.5, 74.4, 73.8], 'nu_cvpr2016_mdipfl50_resnet18_valacc': [100.0, 94.3, 88.2, 84.5, 82.9, 78.7, 76.1, 74.1, 70.0, 71.1], 'nu_cvpr2016_mdipfl50_resnet18_nopretrain-hardest_trainacc': [100.0, 95.2, 86.4, 83.5, 79.3, 77.4, 73.4, 71.5, 68.4, 66.0], 'nu_cvpr2016_mdipfl50_resnet18_nopretrain-hardest_valacc': [100.0, 92.8, 87.4, 82.4, 80.2, 73.4, 70.4, 69.3, 65.9, 61.7], 'nu_cvpr2016_mdipfl50_resnet18_nopretrain_trainacc': [100.0, 96.8, 92.8, 90.9, 86.0, 86.2, 83.7, 81.6, 80.8, 77.4], 'nu_cvpr2016_mdipfl50_resnet18_nopretrain_valacc': [100.0, 94.8, 90.2, 88.6, 82.9, 81.0, 81.5, 74.9, 74.8, 75.7], 'nu_cvpr2016_mdipfl50_resnet18_siamese_trainacc': [100.0, 92.8, 87.4, 85.2, 78.9, 74.3, 73.4, 72.2, 69.9, 66.9], 'nu_cvpr2016_mdipfl50_resnet18_siamese_valacc': [100.0, 91.8, 83.5, 79.4, 76.1, 74.0, 71.3, 65.8, 66.5, 65.6], 'nu_cvpr2016_mdipfl50_resnet18_siamese_nopretrain_trainacc': [100.0, 83.6, 78.6, 71.2, 71.2, 63.5, 61.3, 59.2, 56.9, 54.1], 'nu_cvpr2016_mdipfl50_resnet18_siamese_nopretrain_valacc': [100.0, 82.9, 76.0, 70.3, 67.7, 66.0, 62.0, 58.1, 56.7, 55.1], 'nu_cvpr2016_resnet18-hardest_trainacc': [100.0, 97.8, 94.4, 93.8, 89.3, 88.7, 87.5, 85.3, 83.0, 82.8], 'nu_cvpr2016_resnet18-hardest_valacc': [100.0, 95.8, 93.4, 91.3, 89.7, 87.8, 85.4, 85.7, 83.1, 82.3], 'nu_cvpr2016_resnet18_trainacc': [100.0, 97.3, 95.7, 93.0, 91.8, 89.1, 87.8, 85.4, 85.1, 83.9], 'nu_cvpr2016_resnet18_valacc': [100.0, 96.1, 93.6, 90.7, 90.4, 85.9, 86.8, 84.9, 82.0, 78.6], 'nu_cvpr2016_resnet18_siamese_trainacc': [100.0, 97.8, 97.9, 95.6, 95.7, 92.8, 93.7, 92.5, 91.4, 89.2], 'nu_cvpr2016_resnet18_siamese_valacc': [100.0, 96.8, 95.8, 92.3, 90.7, 90.0, 87.6, 86.0, 85.0, 83.5]}
+nist_mdipfl50_mymodel-hardest_trainacc [100.0, 97.1, 93.9, 89.9, 87.8, 85.7, 85.0, 83.2, 82.1, 81.0]
+nist_mdipfl50_mymodel-hardest_valacc [100.0, 96.2, 93.2, 88.3, 87.1, 82.9, 79.9, 81.1, 79.5, 75.1]
+nist_mdipfl50_mymodel_trainacc [100.0, 95.1, 89.1, 87.6, 84.9, 83.3, 80.0, 76.7, 75.9, 71.2]
+nist_mdipfl50_mymodel_valacc [100.0, 92.4, 87.3, 86.2, 81.5, 77.6, 75.0, 76.0, 69.6, 70.6]
+nist_mdipfl50_mymodel_nopretrain-hardest_trainacc [100.0, 97.2, 92.8, 90.1, 87.4, 85.8, 82.7, 82.4, 78.5, 76.6]
+nist_mdipfl50_mymodel_nopretrain-hardest_valacc [100.0, 94.3, 91.8, 87.3, 83.4, 80.8, 79.3, 77.3, 77.2, 75.5]
+nist_mdipfl50_mymodel_nopretrain_trainacc [100.0, 82.6, 71.2, 66.5, 58.5, 56.3, 54.5, 51.5, 48.5, 46.0]
+nist_mdipfl50_mymodel_nopretrain_valacc [100.0, 80.8, 72.4, 66.4, 61.0, 54.7, 54.8, 50.6, 45.6, 42.2]
+nist_mdipfl50_mymodel_siamese_trainacc [100.0, 98.7, 97.4, 96.2, 95.0, 93.3, 93.4, 92.0, 91.3, 90.2]
+nist_mdipfl50_mymodel_siamese_valacc [100.0, 97.3, 95.2, 94.0, 90.4, 88.8, 87.1, 88.3, 87.2, 86.2]
+nist_mdipfl50_mymodel_siamese_nopretrain_trainacc [100.0, 98.6, 96.7, 96.1, 94.0, 93.5, 93.4, 92.7, 92.0, 91.6]
+nist_mdipfl50_mymodel_siamese_nopretrain_valacc [100.0, 97.7, 95.1, 93.9, 92.7, 92.2, 88.0, 88.1, 85.9, 87.3]
+nist_mymodel-hardest_trainacc [100.0, 96.2, 93.5, 91.7, 89.4, 87.6, 81.9, 82.1, 83.6, 81.0]
+nist_mymodel-hardest_valacc [100.0, 95.7, 92.5, 91.1, 86.7, 82.4, 81.0, 80.2, 76.9, 75.3]
+nist_mymodel_trainacc [100.0, 96.3, 92.4, 90.4, 86.7, 86.2, 83.4, 81.5, 79.7, 77.7]
+nist_mymodel_valacc [100.0, 94.8, 87.7, 86.0, 83.9, 80.5, 82.0, 75.6, 77.5, 74.2]
+nist_mymodel_nopretrain-hardest_trainacc [100.0, 96.6, 93.0, 88.5, 87.5, 85.2, 83.2, 80.8, 79.8, 78.8]
+nist_mymodel_nopretrain-hardest_valacc [100.0, 95.8, 91.0, 87.1, 87.7, 84.5, 80.4, 80.6, 78.3, 76.1]
+nist_mymodel_nopretrain_trainacc [100.0, 96.5, 93.5, 90.9, 90.0, 86.3, 84.3, 83.8, 84.4, 80.2]
+nist_mymodel_nopretrain_valacc [100.0, 94.7, 93.4, 88.0, 86.7, 83.5, 83.3, 79.8, 80.1, 76.7]
+nist_mymodel_siamese_trainacc [100.0, 99.1, 97.9, 97.6, 96.0, 94.1, 95.1, 92.9, 93.3, 91.9]
+nist_mymodel_siamese_valacc [100.0, 98.3, 96.4, 95.6, 93.7, 92.2, 90.9, 90.4, 88.8, 89.9]
+nist_mymodel_siamese_nopretrain_trainacc [100.0, 99.3, 98.1, 97.6, 96.7, 95.1, 96.0, 94.2, 92.3, 91.9]
+nist_mymodel_siamese_nopretrain_valacc [100.0, 98.2, 97.5, 94.9, 94.7, 92.3, 93.6, 90.1, 87.8, 89.5]
+nist_sq_mymodel-hardest_trainacc [100.0, 94.1, 88.6, 87.3, 84.3, 82.4, 79.0, 78.4, 74.1, 73.0]
+nist_sq_mymodel-hardest_valacc [100.0, 94.1, 86.3, 85.9, 81.2, 78.1, 77.6, 71.7, 68.1, 69.8]
+nist_sq_mymodel_trainacc [100.0, 91.9, 86.6, 80.9, 77.3, 75.2, 73.4, 69.6, 66.0, 65.7]
+nist_sq_mymodel_valacc [100.0, 90.3, 83.8, 81.3, 77.3, 72.4, 68.2, 68.2, 65.1, 60.4]
+nist_sq_mymodel_nopretrain-hardest_trainacc [100.0, 93.9, 87.0, 80.0, 75.9, 74.3, 74.0, 70.6, 66.6, 68.9]
+nist_sq_mymodel_nopretrain-hardest_valacc [100.0, 90.4, 83.0, 80.5, 76.4, 68.9, 70.6, 66.1, 64.2, 64.2]
+nist_sq_mymodel_nopretrain_trainacc [100.0, 83.2, 71.4, 66.2, 61.6, 52.5, 52.2, 46.7, 43.3, 45.1]
+nist_sq_mymodel_nopretrain_valacc [100.0, 81.9, 70.3, 65.7, 61.4, 57.2, 52.1, 49.1, 45.0, 46.3]
+nist_sq_mymodel_siamese_trainacc [100.0, 98.6, 96.2, 95.2, 95.7, 94.5, 93.1, 92.1, 90.8, 89.9]
+nist_sq_mymodel_siamese_valacc [100.0, 97.5, 94.7, 94.0, 94.5, 90.5, 91.6, 89.7, 88.0, 86.5]
+nist_sq_mymodel_siamese_nopretrain_trainacc [100.0, 98.1, 93.7, 93.9, 90.1, 89.4, 87.9, 86.8, 84.3, 85.0]
+nist_sq_mymodel_siamese_nopretrain_valacc [100.0, 94.9, 92.8, 91.1, 88.8, 84.9, 83.3, 84.4, 82.1, 79.8]
+nu_cvpr2016_mdipfl50_mymodel-hardest_trainacc [100.0, 82.6, 77.6, 67.9, 60.5, 55.4, 53.2, 54.5, 49.8, 47.9]
+nu_cvpr2016_mdipfl50_mymodel-hardest_valacc [100.0, 85.2, 77.9, 68.8, 63.0, 60.7, 55.9, 53.9, 49.9, 44.5]
+nu_cvpr2016_mdipfl50_mymodel_trainacc [100.0, 85.4, 78.2, 75.5, 68.2, 62.0, 61.9, 57.3, 54.1, 49.7]
+nu_cvpr2016_mdipfl50_mymodel_valacc [100.0, 86.6, 75.6, 69.3, 66.8, 63.3, 58.8, 54.7, 51.9, 52.5]
+nu_cvpr2016_mdipfl50_mymodel_siamese_trainacc [100.0, 64.1, 50.8, 45.0, 36.6, 34.6, 30.3, 28.4, 25.5, 25.5]
+nu_cvpr2016_mdipfl50_mymodel_siamese_valacc [100.0, 62.0, 48.5, 42.0, 37.7, 30.5, 26.3, 25.7, 23.1, 19.4]
+nu_cvpr2016_mdipfl50_nasnet-hardest_trainacc [100.0, 89.4, 78.3, 71.7, 65.3, 64.4, 60.2, 57.3, 53.4, 50.8]
+nu_cvpr2016_mdipfl50_nasnet-hardest_valacc [100.0, 89.1, 78.9, 71.1, 67.4, 64.4, 57.7, 55.5, 53.9, 49.3]
+nu_cvpr2016_mdipfl50_nasnet_trainacc [100.0, 87.5, 75.3, 71.0, 67.7, 61.7, 58.6, 56.3, 52.0, 50.3]
+nu_cvpr2016_mdipfl50_nasnet_valacc [100.0, 87.2, 79.4, 70.7, 64.5, 65.4, 60.0, 56.5, 53.3, 49.8]
+nu_cvpr2016_mdipfl50_nasnet_nopretrain-hardest_trainacc [100.0, 82.1, 68.9, 63.3, 55.8, 52.5, 49.5, 47.0, 42.6, 42.2]
+nu_cvpr2016_mdipfl50_nasnet_nopretrain-hardest_valacc [100.0, 80.7, 70.2, 62.1, 58.4, 50.8, 43.6, 43.1, 40.7, 40.4]
+nu_cvpr2016_mdipfl50_nasnet_nopretrain_trainacc [100.0, 88.0, 80.4, 71.6, 68.2, 65.7, 62.5, 57.2, 54.7, 50.8]
+nu_cvpr2016_mdipfl50_nasnet_nopretrain_valacc [100.0, 88.4, 80.7, 72.0, 67.6, 65.2, 62.5, 57.3, 52.1, 50.0]
+nu_cvpr2016_mdipfl50_nasnet_siamese_trainacc [100.0, 82.2, 70.8, 64.7, 58.9, 54.3, 52.6, 47.7, 45.7, 43.3]
+nu_cvpr2016_mdipfl50_nasnet_siamese_valacc [100.0, 76.6, 69.3, 61.3, 55.4, 52.6, 48.4, 45.5, 43.2, 41.8]
+nu_cvpr2016_mdipfl50_nasnet_siamese_nopretrain_trainacc [100.0, 80.6, 69.8, 59.4, 53.0, 49.3, 48.6, 43.7, 40.2, 38.7]
+nu_cvpr2016_mdipfl50_nasnet_siamese_nopretrain_valacc [100.0, 79.7, 68.2, 57.0, 55.3, 50.2, 47.8, 43.0, 41.0, 37.9]
+nu_cvpr2016_mdipfl50_resnet18-hardest_trainacc [100.0, 94.2, 89.7, 87.5, 83.1, 79.1, 76.8, 77.5, 77.7, 74.2]
+nu_cvpr2016_mdipfl50_resnet18-hardest_valacc [100.0, 93.2, 89.3, 83.0, 81.2, 78.7, 72.7, 72.0, 73.2, 70.7]
+nu_cvpr2016_mdipfl50_resnet18_trainacc [100.0, 95.7, 91.2, 89.1, 85.2, 82.4, 80.5, 79.5, 74.4, 73.8]
+nu_cvpr2016_mdipfl50_resnet18_valacc [100.0, 94.3, 88.2, 84.5, 82.9, 78.7, 76.1, 74.1, 70.0, 71.1]
+nu_cvpr2016_mdipfl50_resnet18_nopretrain-hardest_trainacc [100.0, 95.2, 86.4, 83.5, 79.3, 77.4, 73.4, 71.5, 68.4, 66.0]
+nu_cvpr2016_mdipfl50_resnet18_nopretrain-hardest_valacc [100.0, 92.8, 87.4, 82.4, 80.2, 73.4, 70.4, 69.3, 65.9, 61.7]
+nu_cvpr2016_mdipfl50_resnet18_nopretrain_trainacc [100.0, 96.8, 92.8, 90.9, 86.0, 86.2, 83.7, 81.6, 80.8, 77.4]
+nu_cvpr2016_mdipfl50_resnet18_nopretrain_valacc [100.0, 94.8, 90.2, 88.6, 82.9, 81.0, 81.5, 74.9, 74.8, 75.7]
+nu_cvpr2016_mdipfl50_resnet18_siamese_trainacc [100.0, 92.8, 87.4, 85.2, 78.9, 74.3, 73.4, 72.2, 69.9, 66.9]
+nu_cvpr2016_mdipfl50_resnet18_siamese_valacc [100.0, 91.8, 83.5, 79.4, 76.1, 74.0, 71.3, 65.8, 66.5, 65.6]
+nu_cvpr2016_mdipfl50_resnet18_siamese_nopretrain_trainacc [100.0, 83.6, 78.6, 71.2, 71.2, 63.5, 61.3, 59.2, 56.9, 54.1]
+nu_cvpr2016_mdipfl50_resnet18_siamese_nopretrain_valacc [100.0, 82.9, 76.0, 70.3, 67.7, 66.0, 62.0, 58.1, 56.7, 55.1]
+nu_cvpr2016_resnet18-hardest_trainacc [100.0, 97.8, 94.4, 93.8, 89.3, 88.7, 87.5, 85.3, 83.0, 82.8]
+nu_cvpr2016_resnet18-hardest_valacc [100.0, 95.8, 93.4, 91.3, 89.7, 87.8, 85.4, 85.7, 83.1, 82.3]
+nu_cvpr2016_resnet18_trainacc [100.0, 97.3, 95.7, 93.0, 91.8, 89.1, 87.8, 85.4, 85.1, 83.9]
+nu_cvpr2016_resnet18_valacc [100.0, 96.1, 93.6, 90.7, 90.4, 85.9, 86.8, 84.9, 82.0, 78.6]
+nu_cvpr2016_resnet18_siamese_trainacc [100.0, 97.8, 97.9, 95.6, 95.7, 92.8, 93.7, 92.5, 91.4, 89.2]
+nu_cvpr2016_resnet18_siamese_valacc [100.0, 96.8, 95.8, 92.3, 90.7, 90.0, 87.6, 86.0, 85.0, 83.5]
+(venv-EmbeddingNet) kerteszg@cudaServer:~/EmbeddingNet$ 
