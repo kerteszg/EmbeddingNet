@@ -2,11 +2,29 @@
 
 Original framework is available at https://github.com/RocketFlash/EmbeddingNet. 
 
-This repository contains the modifications and materials used in experiments described in *Metric Embedding Learning on Multi-Directional Projections*, submitted to *MDPI Algorithms*. Result logs are available in https://github.com/kerteszg/EmbeddingNet/tree/master/experiment-results.
+This repository contains the modifications and materials used in experiments described in ***Metric Embedding Learning on Multi-Directional Projections***, submitted to *MDPI Algorithms* to be published as an Open Access research article (*currently under review*). Result logs are available in https://github.com/kerteszg/EmbeddingNet/tree/master/experiment-results.
 
-Below are the original instructions to setup the environment. To setup the original version of the framework, please refer to the installation notes on [the original repository](https://github.com/RocketFlash/EmbeddingNet).
+# Results
+
+The method presented in the paper is based on the MDIPFL transformation, which is applied as a dimensionality reduction technique to compress input images efficiently. These transformed images are fed to Siamese and Triplet Networks, and performance were measured for metric learning with and without multiclass classification pretraining, and for different triplet mining methods. Results are compared with raw image input based approaches.
+
+Scripts for preprocessing and result collection are available in the [notebooks](https://github.com/kerteszg/EmbeddingNet/tree/master/notebooks) dir.
+
+## NIST SD19
+
+To prove the discriminative ability of the proposed method by experiments, the NIST SD19 dataset was used. After highlighting and transformation, different experiments were performed using a similar backbone architecture.
+
+Results showed, that the MDIPFL based approach achieves similar performance, despite of the significantly lower number of parameters.
+
+## ATS-CVPR2016
+
+To apply the method in a real-life problem of object re-identification, the dataset published in the *International Workshop on Automatic Traffic Surveillance of CVPR 2016* is processed similarly. As a backbone architecture, ResNet-18 was applied.
+
+On 10-way one-shot classification, the model trained with only with triplet loss on semi-hard negatives achieved a decent performance of 75.7% for one-shot classification on the validation dataset.
 
 # Installation
+
+Below are the original instructions to setup the environment. To setup the original version of the framework, please refer to the installation notes on [the original repository](https://github.com/RocketFlash/EmbeddingNet).
 
 Clone the repository using:
 
