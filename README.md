@@ -2,7 +2,25 @@
 
 Original framework is available at https://github.com/RocketFlash/EmbeddingNet. 
 
-This repository contains the modifications and materials used in experiments described in ***Metric Embedding Learning on Multi-Directional Projections***, submitted to *MDPI Algorithms* to be published as an Open Access research article (*currently under review*). Result logs are available in https://github.com/kerteszg/EmbeddingNet/tree/master/experiment-results.
+This repository contains the modifications and materials used in experiments described in ***Metric Embedding Learning on Multi-Directional Projections***, [published in *MDPI Algorithms* as an Open Access research article](https://www.mdpi.com/1999-4893/13/6/133). Result logs are available in https://github.com/kerteszg/EmbeddingNet/tree/master/experiment-results.
+
+In case you've found this work useful, please consider referring to this paper as 
+<pre>
+@article{Kertesz2020Metric, 
+  title={Metric Embedding Learning on Multi-Directional Projections}, 
+  author={Kertész, Gábor}, 
+  journal={Algorithms}, 
+  volume={13}, 
+  number={6}, 
+  ISSN={1999-4893}, 
+  url={http://dx.doi.org/10.3390/a13060133}, 
+  DOI={10.3390/a13060133}, 
+  publisher={MDPI AG}, 
+  year={2020}, 
+  month={May}, 
+  pages={133}
+}
+</pre>
 
 # Results
 
